@@ -68,7 +68,9 @@ public class Main {
 
 
     private void Encrypt() {
-        System.out.println("Encrypt");
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("Please enter a file Name");
+        String input = keyboard.nextLine();
     }
 
     private void Decrypt() {
