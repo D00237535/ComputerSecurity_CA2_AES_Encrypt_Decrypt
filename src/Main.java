@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 public class Main {
 
-
     public static void main(String[] args) {
         Main app = new Main();
         app.start();
@@ -75,7 +74,6 @@ public class Main {
         System.out.println("\nExiting Main Menu, goodbye.");
     }
 
-
     private void Encrypt() {
 
         Scanner keyboard = new Scanner(System.in);
@@ -103,7 +101,6 @@ public class Main {
 
         saveToFile("ciphertext.txt", ciphertext);
     }
-
 
     private void Decrypt() {
 
@@ -142,7 +139,6 @@ public class Main {
         return plaintext;
     }
 
-
     public void saveToFile(String fileName, String text) {
 
         try {
@@ -160,29 +156,3 @@ public class Main {
         }
     }
 }
-
-
-//public class MainApp {
-//
-//    public static void main(String[] args) throws IOException {
-//
-//        String originalPlaintext = "This is a plaintext\nLine2\t...tabbed";
-//        String password = "Super Secret";
-//
-//        // We need to turn the low-entropy password into a fixed-entropy
-//        // key which is 128, 192, or 256 bytes in length. As our Password
-//        // object already gives us a way to do this -- we'll use that
-//        // (generates a 256-bit key, as a base64-encoded string)
-//        String salt = Password.generateRandomSalt();
-//        String masterEncryptionKey = new Password(password, salt).generateHash();
-//
-//        // Encrypt and print ciphertext
-//        String ciphertext = Cipher.encryptString(originalPlaintext, masterEncryptionKey);
-//        System.out.println("\nCIPHERTEXT:");
-//        System.out.println(ciphertext);
-//
-//        // Decrypt and print plaintext
-
-//    }
-
-//}
